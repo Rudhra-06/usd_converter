@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+</head>
+<body>
+  <h2>USD to INR Converter</h2>
+  <input id="usd" placeholder="Enter USD amount">
+  <button onclick="convert()">Convert to INR</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const usd = parseFloat(document.getElementById("usd").value);
+      if (isNaN(usd)) {
+        document.getElementById("result").textContent = "Please enter a valid number.";
+        return;
+      }
+      const inr = usd * 83;
+      document.getElementById("result").textContent = INR: ₹${inr.toFixed(2)};
+    }
+  </script>
+</body>
+</html>
